@@ -59,10 +59,12 @@ function resolveRoute(route){
     }
 }
 
-function route(evt){
+function router(evt){
     let url = window.location.hash.slice(1) || '/'
     let route = resolveRoute(url)
 
     route()
 }
 
+window.addEventListener('add', router)
+window.addEventListener('hashchange', router)

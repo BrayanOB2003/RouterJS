@@ -12,6 +12,7 @@ function home() {
     div.appendChild(link);
 
     app_div.appendChild(div);
+    
 };
 
 function about() {
@@ -67,5 +68,10 @@ function router(evt) {
     route();
 };
 
+function reload(){
+    router()
+    location.reload();
+}
+
 window.addEventListener('load', router);
-window.addEventListener('hashchange', router);
+window.addEventListener('hashchange', reload);

@@ -6,7 +6,7 @@ function home(){
     let div = document.createElement('div');
     let link = document.createElement('a');
     link.href = '#/about';
-    link.innerText = 'about';
+    link.innerText = 'About';
 
     div.innerHTML = '<h1>Home</h1>';
     div.appendChild(link);
@@ -18,7 +18,7 @@ function about(){
     let div = document.createElement('div')
     let link = document.createElement('a')
     link.href = '#/'
-    link.innerText = 'home'
+    link.innerText = 'Home'
 
     div.innerHTML = '<h1>About</h1>'
     div.appendChild(link)
@@ -66,5 +66,5 @@ function router(evt){
     route()
 }
 
-window.addEventListener('add', router)
+window.addEventListener('load', router)
 window.addEventListener('hashchange', router)
